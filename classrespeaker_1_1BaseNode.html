@@ -132,6 +132,8 @@ std::queue&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign=
 <tr class="separator:aeb2d0e40fc228d2d6a7c714837cba496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e3689fddd7f544d5027a7c7a6869ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1BaseNode.html#a72e3689fddd7f544d5027a7c7a6869ba">BindToCore</a> (int core_index)</td></tr>
 <tr class="separator:a72e3689fddd7f544d5027a7c7a6869ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a1f5f6f0655912b8eca7f2d285a3dcd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1BaseNode.html#a9a1f5f6f0655912b8eca7f2d285a3dcd">SetThreadPriority</a> (int priority)</td></tr>
+<tr class="separator:a9a1f5f6f0655912b8eca7f2d285a3dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -176,7 +178,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Bind the thread to a specified CPU core. Dont touch this method unless you know what's happening </p>
+<p>Bind the thread to a specified CPU core. Must be callbed before <code>RecursivelyStartThread</code>. Don't touch this method unless you know what's happening. </p>
 
 </div>
 </div>
@@ -457,6 +459,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9a1f5f6f0655912b8eca7f2d285a3dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a1f5f6f0655912b8eca7f2d285a3dcd">&#9670;&nbsp;</a></span>SetThreadPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool respeaker::BaseNode::SetThreadPriority </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the priority of the thread. Must be callbed before <code>RecursivelyStartThread</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">priority</td><td>- [1,99], 99 has highest priority, the default is 50.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
