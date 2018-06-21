@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pulsecollectornode',['PulseCollectorNode',['../classrespeaker_1_1PulseCollectorNode.html',1,'respeaker']]]
+  ['mandoakwsnode',['ManDoaKwsNode',['../classrespeaker_1_1ManDoaKwsNode.html',1,'respeaker']]]
 ];

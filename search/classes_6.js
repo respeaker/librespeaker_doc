@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['respeaker',['ReSpeaker',['../classrespeaker_1_1ReSpeaker.html',1,'respeaker']]]
+  ['nodeparameter',['NodeParameter',['../structrespeaker_1_1NodeParameter.html',1,'respeaker']]]
 ];

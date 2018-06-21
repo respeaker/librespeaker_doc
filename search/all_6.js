@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['getdirection',['GetDirection',['../classrespeaker_1_1DirectionReporterNode.html#a33c3a1f60112789f1363114fe2a29160',1,'respeaker::DirectionReporterNode::GetDirection()'],['../classrespeaker_1_1VepDoaKwsNode.html#a2938773502c1e1a7b9b4f73e50e77719',1,'respeaker::VepDoaKwsNode::GetDirection()'],['../classrespeaker_1_1ReSpeaker.html#a8540441a8b65a96bf1bd5cc038f4d0cf',1,'respeaker::ReSpeaker::GetDirection()']]],
-  ['getid',['GetId',['../classrespeaker_1_1BaseNode.html#aa64e2eb930291b7763f6d18a8ef16e49',1,'respeaker::BaseNode']]],
-  ['getnodeoutputparameter',['GetNodeOutputParameter',['../classrespeaker_1_1BaseNode.html#a54f95dc810c69f48af08e3f0770432de',1,'respeaker::BaseNode']]],
-  ['getnumoutputchannels',['GetNumOutputChannels',['../classrespeaker_1_1ReSpeaker.html#a13d1bceb8df7a112c3d4d789615a6db2',1,'respeaker::ReSpeaker']]],
-  ['getnumoutputrate',['GetNumOutputRate',['../classrespeaker_1_1ReSpeaker.html#aeef2b96d6177f0666fcd6a0d9f37078c',1,'respeaker::ReSpeaker']]],
-  ['getqueuedeepth',['GetQueueDeepth',['../classrespeaker_1_1BaseNode.html#aeb2d0e40fc228d2d6a7c714837cba496',1,'respeaker::BaseNode']]],
-  ['getvad',['GetVad',['../classrespeaker_1_1ReSpeaker.html#a18c9f9a2c1d8dd8e4555e693b672fd0b',1,'respeaker::ReSpeaker']]]
+  ['fatal_5flog_5flevel',['FATAL_LOG_LEVEL',['../namespacerespeaker.html#a20e1a7db6be2c508966379af4c46db3da0cc712af38ace1ccf2a4850f956e6306',1,'respeaker']]],
+  ['fetchblock',['FetchBlock',['../classrespeaker_1_1AlsaCollectorNode.html#addb077db10036eb30ef3d024f2e16dab',1,'respeaker::AlsaCollectorNode::FetchBlock()'],['../classrespeaker_1_1BaseNode.html#a82f301a825f6245864e5df280ffd2e80',1,'respeaker::BaseNode::FetchBlock()'],['../classrespeaker_1_1HybridNode.html#a036abb34325ffacb2db8de7d11c08082',1,'respeaker::HybridNode::FetchBlock()'],['../classrespeaker_1_1PulseCollectorNode.html#aa0a9a9cad60dc06a68f758a2a5601495',1,'respeaker::PulseCollectorNode::FetchBlock()']]]
 ];

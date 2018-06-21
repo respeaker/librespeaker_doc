@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['chainshareddata',['ChainSharedData',['../structrespeaker_1_1ChainSharedData.html',1,'respeaker']]]
+  ['basenode',['BaseNode',['../classrespeaker_1_1BaseNode.html',1,'respeaker']]]
 ];

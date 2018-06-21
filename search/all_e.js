@@ -1,15 +1,6 @@
 var searchData=
 [
-  ['selectornode',['SelectorNode',['../classrespeaker_1_1SelectorNode.html',1,'respeaker']]],
-  ['setagctargetleveldbfs',['SetAgcTargetLevelDbfs',['../classrespeaker_1_1VepDoaKwsNode.html#af2aa3609bd9993640a5ad3631d42482d',1,'respeaker::VepDoaKwsNode']]],
-  ['setangleformic0',['SetAngleForMic0',['../classrespeaker_1_1VepDoaKwsNode.html#a7cc7f9259805b20d17356e057b163f83',1,'respeaker::VepDoaKwsNode']]],
-  ['setchainstate',['SetChainState',['../classrespeaker_1_1ReSpeaker.html#a4164daf86f69a5396b8b85daf75f7723',1,'respeaker::ReSpeaker']]],
-  ['setdoaecwhenlisten',['SetDoAecWhenListen',['../classrespeaker_1_1VepDoaKwsNode.html#a7a16870d2c524e3e1b8f3f1af00c9bc6',1,'respeaker::VepDoaKwsNode']]],
-  ['setloglevel',['SetLogLevel',['../classrespeaker_1_1ReSpeaker.html#a79f5b9622b7603bb97f688d94de0bcd3',1,'respeaker::ReSpeaker']]],
-  ['setthreadpriority',['SetThreadPriority',['../classrespeaker_1_1BaseNode.html#a9a1f5f6f0655912b8eca7f2d285a3dcd',1,'respeaker::BaseNode']]],
-  ['settriggerpostconfirmthresholdtime',['SetTriggerPostConfirmThresholdTime',['../classrespeaker_1_1VepDoaKwsNode.html#a4bd2a35bdff6ea8ebcde5709fd463420',1,'respeaker::VepDoaKwsNode']]],
-  ['start',['Start',['../classrespeaker_1_1ReSpeaker.html#ad751960137fb5453e966e96c7fb0cdd0',1,'respeaker::ReSpeaker']]],
-  ['state',['state',['../structrespeaker_1_1ChainSharedData.html#ab55958f68aa075bf383b50cf2b32c9f1',1,'respeaker::ChainSharedData']]],
-  ['stop',['Stop',['../classrespeaker_1_1ReSpeaker.html#ad5fb1bab671f0435e614d9deeba09f51',1,'respeaker::ReSpeaker']]],
-  ['storeblock',['StoreBlock',['../classrespeaker_1_1BaseNode.html#a70a1aabbbe47c6f686239defb81d2ac5',1,'respeaker::BaseNode']]]
+  ['pause',['Pause',['../classrespeaker_1_1ReSpeaker.html#abdeb0f1af01bbe97fad98123bb4b3b8c',1,'respeaker::ReSpeaker']]],
+  ['processblock',['ProcessBlock',['../classrespeaker_1_1AlsaCollectorNode.html#a14f328404b6b46256069ddb716aaa087',1,'respeaker::AlsaCollectorNode::ProcessBlock()'],['../classrespeaker_1_1BaseNode.html#a58efcb38cbd0dc75a97060afb911e910',1,'respeaker::BaseNode::ProcessBlock()'],['../classrespeaker_1_1HybridNode.html#a50d2786baca97cc988b540f6c9ff79b2',1,'respeaker::HybridNode::ProcessBlock()'],['../classrespeaker_1_1ManDoaKwsNode.html#a49761a6dc4830d97607f7890612f2308',1,'respeaker::ManDoaKwsNode::ProcessBlock()'],['../classrespeaker_1_1PulseCollectorNode.html#a6447a61322a2e6dcde2ebd8f149614f8',1,'respeaker::PulseCollectorNode::ProcessBlock()'],['../classrespeaker_1_1SelectorNode.html#ac8d360d3d63742ce05922a8d81030d9f',1,'respeaker::SelectorNode::ProcessBlock()'],['../classrespeaker_1_1VepAecBeamformingNode.html#a28702dc845658f64e1fec58c12315717',1,'respeaker::VepAecBeamformingNode::ProcessBlock()'],['../classrespeaker_1_1VepDoaKwsNode.html#ad8e66d6a121da248bb66c005b43263c5',1,'respeaker::VepDoaKwsNode::ProcessBlock()']]],
+  ['pulsecollectornode',['PulseCollectorNode',['../classrespeaker_1_1PulseCollectorNode.html',1,'respeaker']]]
 ];

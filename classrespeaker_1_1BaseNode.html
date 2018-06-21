@@ -80,11 +80,13 @@ Inheritance diagram for respeaker::BaseNode:</div>
  <div class="center">
   <img src="classrespeaker_1_1BaseNode.png" usemap="#respeaker::BaseNode_map" alt=""/>
   <map id="respeaker::BaseNode_map" name="respeaker::BaseNode_map">
-<area href="classrespeaker_1_1HybridNode.html" alt="respeaker::HybridNode" shape="rect" coords="0,56,224,80"/>
-<area href="classrespeaker_1_1PulseCollectorNode.html" alt="respeaker::PulseCollectorNode" shape="rect" coords="234,56,458,80"/>
-<area href="classrespeaker_1_1SelectorNode.html" alt="respeaker::SelectorNode" shape="rect" coords="468,56,692,80"/>
-<area href="classrespeaker_1_1VepAecBeamformingNode.html" alt="respeaker::VepAecBeamformingNode" shape="rect" coords="702,56,926,80"/>
-<area href="classrespeaker_1_1VepDoaKwsNode.html" alt="respeaker::VepDoaKwsNode" shape="rect" coords="936,56,1160,80"/>
+<area href="classrespeaker_1_1AlsaCollectorNode.html" alt="respeaker::AlsaCollectorNode" shape="rect" coords="0,56,224,80"/>
+<area href="classrespeaker_1_1HybridNode.html" alt="respeaker::HybridNode" shape="rect" coords="234,56,458,80"/>
+<area href="classrespeaker_1_1ManDoaKwsNode.html" alt="respeaker::ManDoaKwsNode" shape="rect" coords="468,56,692,80"/>
+<area href="classrespeaker_1_1PulseCollectorNode.html" alt="respeaker::PulseCollectorNode" shape="rect" coords="702,56,926,80"/>
+<area href="classrespeaker_1_1SelectorNode.html" alt="respeaker::SelectorNode" shape="rect" coords="936,56,1160,80"/>
+<area href="classrespeaker_1_1VepAecBeamformingNode.html" alt="respeaker::VepAecBeamformingNode" shape="rect" coords="1170,56,1394,80"/>
+<area href="classrespeaker_1_1VepDoaKwsNode.html" alt="respeaker::VepDoaKwsNode" shape="rect" coords="1404,56,1628,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -161,6 +163,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_head</b></td></tr
 <tr class="memitem:a610aa4f77aae2dbe3170dadd9088045a"><td class="memItemLeft" align="right" valign="top"><a id="a610aa4f77aae2dbe3170dadd9088045a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr>
 <tr class="separator:a610aa4f77aae2dbe3170dadd9088045a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b09f9e45f6f448ecf7ee3f2fafde4d"><td class="memItemLeft" align="right" valign="top"><a id="ab9b09f9e45f6f448ecf7ee3f2fafde4d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_interleaved_after_process</b></td></tr>
+<tr class="separator:ab9b09f9e45f6f448ecf7ee3f2fafde4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b4451bc2ff6667b489cc9804663719"><td class="memItemLeft" align="right" valign="top"><a id="ab1b4451bc2ff6667b489cc9804663719"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>_num_frames_for_store_block</b></td></tr>
+<tr class="separator:ab1b4451bc2ff6667b489cc9804663719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d61c0cf63208a6a88ae529486cf7b0a"><td class="memItemLeft" align="right" valign="top"><a id="a7d61c0cf63208a6a88ae529486cf7b0a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>_channels_for_store_block</b></td></tr>
+<tr class="separator:a7d61c0cf63208a6a88ae529486cf7b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78650c657fd198def176d39286d57aa"><td class="memItemLeft" align="right" valign="top"><a id="ad78650c657fd198def176d39286d57aa"></a>
+int16_t *&#160;</td><td class="memItemRight" valign="bottom"><b>_buffer_for_store_block</b></td></tr>
+<tr class="separator:ad78650c657fd198def176d39286d57aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e50f8282e18033cc7f14a529be1b073"><td class="memItemLeft" align="right" valign="top"><a id="a5e50f8282e18033cc7f14a529be1b073"></a>
+std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_channels_ptr</b></td></tr>
+<tr class="separator:a5e50f8282e18033cc7f14a529be1b073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a72e3689fddd7f544d5027a7c7a6869ba"></a>
@@ -241,7 +258,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classrespeaker_1_1PulseCollectorNode.html#aa0a9a9cad60dc06a68f758a2a5601495">respeaker::PulseCollectorNode</a>.</p>
+<p>Reimplemented in <a class="el" href="classrespeaker_1_1HybridNode.html#a036abb34325ffacb2db8de7d11c08082">respeaker::HybridNode</a>, <a class="el" href="classrespeaker_1_1PulseCollectorNode.html#aa0a9a9cad60dc06a68f758a2a5601495">respeaker::PulseCollectorNode</a>, and <a class="el" href="classrespeaker_1_1AlsaCollectorNode.html#addb077db10036eb30ef3d024f2e16dab">respeaker::AlsaCollectorNode</a>.</p>
 
 </div>
 </div>
@@ -332,7 +349,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
 </div><div class="memdoc">
 <p>Do per node cleanup in this method. </p>
 
-<p>Implemented in <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#a3e75ed546582b9d09bd06a0cd584e2b3">respeaker::VepDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1HybridNode.html#af7a974f0d64e75ab7434932b7ccfac00">respeaker::HybridNode</a>, <a class="el" href="classrespeaker_1_1PulseCollectorNode.html#a70cbb5d117199585abe37a81d8d1201d">respeaker::PulseCollectorNode</a>, <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#ae506539569ff916c8ba6b3a84e2b3097">respeaker::VepAecBeamformingNode</a>, and <a class="el" href="classrespeaker_1_1SelectorNode.html#a94d93b567e117962fb9aa435c3e55dca">respeaker::SelectorNode</a>.</p>
+<p>Implemented in <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#a3e75ed546582b9d09bd06a0cd584e2b3">respeaker::VepDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1ManDoaKwsNode.html#a8c5761a5d8fa46ba58ce98067ca345f9">respeaker::ManDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1HybridNode.html#af7a974f0d64e75ab7434932b7ccfac00">respeaker::HybridNode</a>, <a class="el" href="classrespeaker_1_1PulseCollectorNode.html#a70cbb5d117199585abe37a81d8d1201d">respeaker::PulseCollectorNode</a>, <a class="el" href="classrespeaker_1_1AlsaCollectorNode.html#a42f3b0e5c348673a8d6040a42506e5a8">respeaker::AlsaCollectorNode</a>, <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#ae506539569ff916c8ba6b3a84e2b3097">respeaker::VepAecBeamformingNode</a>, and <a class="el" href="classrespeaker_1_1SelectorNode.html#a94d93b567e117962fb9aa435c3e55dca">respeaker::SelectorNode</a>.</p>
 
 </div>
 </div>
@@ -360,7 +377,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
 </div><div class="memdoc">
 <p>The derived node must configure the output parameter in this method </p>
 
-<p>Implemented in <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#ac3d7fdc57acdec9f0a6226fbd715bfff">respeaker::VepDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1HybridNode.html#afd2dfe3f2dcce5d3f1215ede40eff52a">respeaker::HybridNode</a>, <a class="el" href="classrespeaker_1_1PulseCollectorNode.html#ae511893eabe1a913185c7bfacb2e9724">respeaker::PulseCollectorNode</a>, <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#aef240e69da72fa57e9b9b43ec3434c72">respeaker::VepAecBeamformingNode</a>, and <a class="el" href="classrespeaker_1_1SelectorNode.html#a325cbb894a322b6a6e48cdcd5c2915da">respeaker::SelectorNode</a>.</p>
+<p>Implemented in <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#ac3d7fdc57acdec9f0a6226fbd715bfff">respeaker::VepDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1ManDoaKwsNode.html#ab76b26575dcfbff312c88a7f685b77b5">respeaker::ManDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1HybridNode.html#afd2dfe3f2dcce5d3f1215ede40eff52a">respeaker::HybridNode</a>, <a class="el" href="classrespeaker_1_1PulseCollectorNode.html#ae511893eabe1a913185c7bfacb2e9724">respeaker::PulseCollectorNode</a>, <a class="el" href="classrespeaker_1_1AlsaCollectorNode.html#a745aa1e545e96881b450a63989e03fc6">respeaker::AlsaCollectorNode</a>, <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#aef240e69da72fa57e9b9b43ec3434c72">respeaker::VepAecBeamformingNode</a>, and <a class="el" href="classrespeaker_1_1SelectorNode.html#a325cbb894a322b6a6e48cdcd5c2915da">respeaker::SelectorNode</a>.</p>
 
 </div>
 </div>
@@ -407,7 +424,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
 
-<p>Implemented in <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#ad8e66d6a121da248bb66c005b43263c5">respeaker::VepDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1HybridNode.html#a50d2786baca97cc988b540f6c9ff79b2">respeaker::HybridNode</a>, <a class="el" href="classrespeaker_1_1PulseCollectorNode.html#a6447a61322a2e6dcde2ebd8f149614f8">respeaker::PulseCollectorNode</a>, <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#a28702dc845658f64e1fec58c12315717">respeaker::VepAecBeamformingNode</a>, and <a class="el" href="classrespeaker_1_1SelectorNode.html#ac8d360d3d63742ce05922a8d81030d9f">respeaker::SelectorNode</a>.</p>
+<p>Implemented in <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#ad8e66d6a121da248bb66c005b43263c5">respeaker::VepDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1ManDoaKwsNode.html#a49761a6dc4830d97607f7890612f2308">respeaker::ManDoaKwsNode</a>, <a class="el" href="classrespeaker_1_1HybridNode.html#a50d2786baca97cc988b540f6c9ff79b2">respeaker::HybridNode</a>, <a class="el" href="classrespeaker_1_1PulseCollectorNode.html#a6447a61322a2e6dcde2ebd8f149614f8">respeaker::PulseCollectorNode</a>, <a class="el" href="classrespeaker_1_1AlsaCollectorNode.html#a14f328404b6b46256069ddb716aaa087">respeaker::AlsaCollectorNode</a>, <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#a28702dc845658f64e1fec58c12315717">respeaker::VepAecBeamformingNode</a>, and <a class="el" href="classrespeaker_1_1SelectorNode.html#ac8d360d3d63742ce05922a8d81030d9f">respeaker::SelectorNode</a>.</p>
 
 </div>
 </div>

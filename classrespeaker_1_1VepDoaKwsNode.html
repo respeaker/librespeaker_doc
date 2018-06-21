@@ -107,6 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3e75ed546582b9d09bd06a0cd584e2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2938773502c1e1a7b9b4f73e50e77719"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#a2938773502c1e1a7b9b4f73e50e77719">GetDirection</a> ()=0</td></tr>
 <tr class="separator:a2938773502c1e1a7b9b4f73e50e77719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54669877de706f771bf05fe636ac9f93"><td class="memItemLeft" align="right" valign="top"><a id="a54669877de706f771bf05fe636ac9f93"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDirection</b> (int dir)=0</td></tr>
+<tr class="separator:a54669877de706f771bf05fe636ac9f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9212991bb74a27d1ace5ded05d2932b8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#a9212991bb74a27d1ace5ded05d2932b8">HotwordDetected</a> ()=0</td></tr>
 <tr class="separator:a9212991bb74a27d1ace5ded05d2932b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classrespeaker_1_1BaseNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrespeaker_1_1BaseNode')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classrespeaker_1_1BaseNode.html">respeaker::BaseNode</a></td></tr>
@@ -155,8 +158,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a03f9bfe2d27b2b3a5f87917484b61763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a189116f4c01547a341a46c8674331f04"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html">VepDoaKwsNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#a189116f4c01547a341a46c8674331f04">Create</a> (std::string snowboy_resource_path, std::string snowboy_model_path, std::string snowboy_sensitivity, int underclocking_count)</td></tr>
 <tr class="separator:a189116f4c01547a341a46c8674331f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef5a03932dedbd72d8262555ae09c94f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html">VepDoaKwsNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#aef5a03932dedbd72d8262555ae09c94f">Create</a> (std::string snowboy_resource_path, std::string snowboy_model_path, std::string snowboy_sensitivity, int underclocking_count, bool enable_agc)</td></tr>
-<tr class="separator:aef5a03932dedbd72d8262555ae09c94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c55eeb561599be439d10c24976e657"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html">VepDoaKwsNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#a51c55eeb561599be439d10c24976e657">Create</a> (std::string snowboy_resource_path, std::string snowboy_model_path, std::string snowboy_sensitivity, int underclocking_count, bool enable_agc, bool output_interleaved=false)</td></tr>
+<tr class="separator:a51c55eeb561599be439d10c24976e657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -183,6 +186,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_head</b></td></tr
 <tr class="memitem:a610aa4f77aae2dbe3170dadd9088045a inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memItemLeft" align="right" valign="top"><a id="a610aa4f77aae2dbe3170dadd9088045a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr>
 <tr class="separator:a610aa4f77aae2dbe3170dadd9088045a inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b09f9e45f6f448ecf7ee3f2fafde4d inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memItemLeft" align="right" valign="top"><a id="ab9b09f9e45f6f448ecf7ee3f2fafde4d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_interleaved_after_process</b></td></tr>
+<tr class="separator:ab9b09f9e45f6f448ecf7ee3f2fafde4d inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b4451bc2ff6667b489cc9804663719 inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memItemLeft" align="right" valign="top"><a id="ab1b4451bc2ff6667b489cc9804663719"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>_num_frames_for_store_block</b></td></tr>
+<tr class="separator:ab1b4451bc2ff6667b489cc9804663719 inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d61c0cf63208a6a88ae529486cf7b0a inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memItemLeft" align="right" valign="top"><a id="a7d61c0cf63208a6a88ae529486cf7b0a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>_channels_for_store_block</b></td></tr>
+<tr class="separator:a7d61c0cf63208a6a88ae529486cf7b0a inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78650c657fd198def176d39286d57aa inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memItemLeft" align="right" valign="top"><a id="ad78650c657fd198def176d39286d57aa"></a>
+int16_t *&#160;</td><td class="memItemRight" valign="bottom"><b>_buffer_for_store_block</b></td></tr>
+<tr class="separator:ad78650c657fd198def176d39286d57aa inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e50f8282e18033cc7f14a529be1b073 inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memItemLeft" align="right" valign="top"><a id="a5e50f8282e18033cc7f14a529be1b073"></a>
+std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_channels_ptr</b></td></tr>
+<tr class="separator:a5e50f8282e18033cc7f14a529be1b073 inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Please note that, this node can only uplink to <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a>. </p>
@@ -292,8 +310,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
 
 </div>
 </div>
-<a id="aef5a03932dedbd72d8262555ae09c94f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef5a03932dedbd72d8262555ae09c94f">&#9670;&nbsp;</a></span>Create() <span class="overload">[3/3]</span></h2>
+<a id="a51c55eeb561599be439d10c24976e657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c55eeb561599be439d10c24976e657">&#9670;&nbsp;</a></span>Create() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +347,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable_agc</em>&#160;</td>
+          <td class="paramname"><em>enable_agc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>output_interleaved</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -345,7 +369,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_tail</b></td></tr
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable_agc</td><td>- enable automatic gain control</td></tr>
+    <tr><td class="paramname">enable_agc</td><td>- enable automatic gain control </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data. At most time, we don't have to set it true in this node. Because the output data has only one channel(beam).</td></tr>
   </table>
   </dd>
 </dl>

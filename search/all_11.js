@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['vad',['vad',['../structrespeaker_1_1ChainSharedData.html#a9aab60b053d30679901268a4cd7d4cd8',1,'respeaker::ChainSharedData']]],
-  ['vad_5fnode_5fpresent',['vad_node_present',['../structrespeaker_1_1ChainSharedData.html#ab5031cd2f768a8c160743adaf6489172',1,'respeaker::ChainSharedData']]],
-  ['vep_5ffreeze',['vep_freeze',['../structrespeaker_1_1ChainSharedData.html#a661966ab3869722b8b0d73e38d1253c1',1,'respeaker::ChainSharedData']]],
-  ['vepaecbeamformingnode',['VepAecBeamformingNode',['../classrespeaker_1_1VepAecBeamformingNode.html',1,'respeaker']]],
-  ['vepdoakwsnode',['VepDoaKwsNode',['../classrespeaker_1_1VepDoaKwsNode.html',1,'respeaker']]]
+  ['trace_5flog_5fleve',['TRACE_LOG_LEVE',['../namespacerespeaker.html#a20e1a7db6be2c508966379af4c46db3da9e39c0835095099aedbf4ebda03a6d14',1,'respeaker']]]
 ];

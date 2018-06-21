@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['basenode',['BaseNode',['../classrespeaker_1_1BaseNode.html',1,'respeaker']]]
+  ['alsacollectornode',['AlsaCollectorNode',['../classrespeaker_1_1AlsaCollectorNode.html',1,'respeaker']]]
 ];
