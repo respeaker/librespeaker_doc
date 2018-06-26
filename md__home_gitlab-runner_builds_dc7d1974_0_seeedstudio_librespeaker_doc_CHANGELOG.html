@@ -65,13 +65,21 @@ $(function() {
 <div class="title">Change Logs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>v1.2.0</h2>
+<div class="textblock"><h2>v1.4.0</h2>
+<ul>
+<li>add Alsa collector node</li>
+<li>add 'output interleave' in BaseNode::StoreBlock, all the nodes support output interleaved or deinterleaved data now</li>
+<li>add components/block_length_governor: helper to change len of deinterleaved data and use it in Hybrid node, now hybrid node is able to accept any length of data</li>
+<li>add manual doa node: Design for user who need to get the speaker direction with other method(e.g. with camera) and set that direction to this node to pick the beam in that direction.</li>
+</ul>
+<h2>v1.2.0</h2>
 <ul>
 <li>Initial release version</li>
 </ul>
 <h2>next</h2>
 <ul>
-<li>Add GetVad() to class ReSpeaker </li>
+<li>Add GetVad() to class ReSpeaker</li>
+<li>multi hotwords detect </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
