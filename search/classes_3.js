@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['directionreporternode',['DirectionReporterNode',['../classrespeaker_1_1DirectionReporterNode.html',1,'respeaker']]]
+  ['directionmanagernode',['DirectionManagerNode',['../classrespeaker_1_1DirectionManagerNode.html',1,'respeaker']]]
 ];

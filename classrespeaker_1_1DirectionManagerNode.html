@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>librespeaker: respeaker::HotwordDetectionNode Class Reference</title>
+<title>librespeaker: respeaker::DirectionManagerNode Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,40 +61,43 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacerespeaker.html">respeaker</a></li><li class="navelem"><a class="el" href="classrespeaker_1_1HotwordDetectionNode.html">HotwordDetectionNode</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacerespeaker.html">respeaker</a></li><li class="navelem"><a class="el" href="classrespeaker_1_1DirectionManagerNode.html">DirectionManagerNode</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classrespeaker_1_1HotwordDetectionNode-members.html">List of all members</a>  </div>
+<a href="classrespeaker_1_1DirectionManagerNode-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">respeaker::HotwordDetectionNode Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">respeaker::DirectionManagerNode Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="hotword__detection__node_8h_source.html">hotword_detection_node.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="direction__manager__node_8h_source.html">direction_manager_node.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for respeaker::HotwordDetectionNode:</div>
+Inheritance diagram for respeaker::DirectionManagerNode:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classrespeaker_1_1HotwordDetectionNode.png" usemap="#respeaker::HotwordDetectionNode_map" alt=""/>
-  <map id="respeaker::HotwordDetectionNode_map" name="respeaker::HotwordDetectionNode_map">
-<area href="classrespeaker_1_1ManDoaKwsNode.html" alt="respeaker::ManDoaKwsNode" shape="rect" coords="0,56,205,80"/>
-<area href="classrespeaker_1_1VepDoaKwsNode.html" alt="respeaker::VepDoaKwsNode" shape="rect" coords="215,56,420,80"/>
+  <img src="classrespeaker_1_1DirectionManagerNode.png" usemap="#respeaker::DirectionManagerNode_map" alt=""/>
+  <map id="respeaker::DirectionManagerNode_map" name="respeaker::DirectionManagerNode_map">
+<area href="classrespeaker_1_1ManDoaKwsNode.html" alt="respeaker::ManDoaKwsNode" shape="rect" coords="0,56,207,80"/>
+<area href="classrespeaker_1_1VepDoaKwsNode.html" alt="respeaker::VepDoaKwsNode" shape="rect" coords="217,56,424,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac00127d5b75776780b63b44179123fdb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1HotwordDetectionNode.html#ac00127d5b75776780b63b44179123fdb">HotwordDetected</a> ()=0</td></tr>
-<tr class="separator:ac00127d5b75776780b63b44179123fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b67c9bf249502916b571a3f9c6137d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1DirectionManagerNode.html#a63b67c9bf249502916b571a3f9c6137d">GetDirection</a> ()=0</td></tr>
+<tr class="separator:a63b67c9bf249502916b571a3f9c6137d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea87b631500d76b7ba11b998fb665af"><td class="memItemLeft" align="right" valign="top"><a id="a6ea87b631500d76b7ba11b998fb665af"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDirection</b> (int dir)=0</td></tr>
+<tr class="separator:a6ea87b631500d76b7ba11b998fb665af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Nodes who can do hotword detection should inherit from this class. </p>
+<div class="textblock"><p>Nodes who can do DoA should inherit from this class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac00127d5b75776780b63b44179123fdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac00127d5b75776780b63b44179123fdb">&#9670;&nbsp;</a></span>HotwordDetected()</h2>
+<a id="a63b67c9bf249502916b571a3f9c6137d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63b67c9bf249502916b571a3f9c6137d">&#9670;&nbsp;</a></span>GetDirection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -103,7 +106,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int respeaker::HotwordDetectionNode::HotwordDetected </td>
+          <td class="memname">virtual int respeaker::DirectionManagerNode::GetDirection </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -117,12 +120,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Subclass should implement this method. </p>
 
-<p>Implemented in <a class="el" href="classrespeaker_1_1ManDoaKwsNode.html#a24c63e7e877ca1aef3b7ca81c0a38f37">respeaker::ManDoaKwsNode</a>, and <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#a4dbac6d326c79eb507f6c2ed5feb8e1e">respeaker::VepDoaKwsNode</a>.</p>
+<p>Implemented in <a class="el" href="classrespeaker_1_1VepDoaKwsNode.html#a2938773502c1e1a7b9b4f73e50e77719">respeaker::VepDoaKwsNode</a>, and <a class="el" href="classrespeaker_1_1ManDoaKwsNode.html#a07a62828153c0ee4fae5b9eb1e054a51">respeaker::ManDoaKwsNode</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/gitlab-runner/builds/dc7d1974/0/seeedstudio/librespeaker/include/chain_nodes/<a class="el" href="hotword__detection__node_8h_source.html">hotword_detection_node.h</a></li>
+<li>/home/gitlab-runner/builds/dc7d1974/0/seeedstudio/librespeaker/include/chain_nodes/<a class="el" href="direction__manager__node_8h_source.html">direction_manager_node.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
