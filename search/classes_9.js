@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['selectornode',['SelectorNode',['../classrespeaker_1_1SelectorNode.html',1,'respeaker']]]
+  ['respeaker',['ReSpeaker',['../classrespeaker_1_1ReSpeaker.html',1,'respeaker']]]
 ];

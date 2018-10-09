@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mandoakwsnode',['ManDoaKwsNode',['../classrespeaker_1_1ManDoaKwsNode.html',1,'respeaker']]]
+  ['hotworddetectionnode',['HotwordDetectionNode',['../classrespeaker_1_1HotwordDetectionNode.html',1,'respeaker']]],
+  ['hybridnode',['HybridNode',['../classrespeaker_1_1HybridNode.html',1,'respeaker']]]
 ];
