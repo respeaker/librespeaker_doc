@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['state',['state',['../structrespeaker_1_1ChainSharedData.html#ab55958f68aa075bf383b50cf2b32c9f1',1,'respeaker::ChainSharedData']]]
+  ['rate',['rate',['../structrespeaker_1_1NodeParameter.html#ac3a485300de82a460470e26b07107c14',1,'respeaker::NodeParameter']]]
 ];
