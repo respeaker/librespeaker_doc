@@ -105,8 +105,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5ece99540ece0c382d603c7ffdcc643b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3158e3f97436ef29226de6eee2921ca"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html#ad3158e3f97436ef29226de6eee2921ca">GetDirection</a> ()=0</td></tr>
 <tr class="separator:ad3158e3f97436ef29226de6eee2921ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eee5ab58827750efe28caf92044a500"><td class="memItemLeft" align="right" valign="top"><a id="a3eee5ab58827750efe28caf92044a500"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDirection</b> (int dir)=0</td></tr>
+<tr class="memitem:a3eee5ab58827750efe28caf92044a500"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html#a3eee5ab58827750efe28caf92044a500">SetDirection</a> (int dir)=0</td></tr>
 <tr class="separator:a3eee5ab58827750efe28caf92044a500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a190d12ef347d479cf7f884f362f66fef"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html#a190d12ef347d479cf7f884f362f66fef">HotwordDetected</a> ()=0</td></tr>
 <tr class="separator:a190d12ef347d479cf7f884f362f66fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,7 +212,7 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 <tr class="separator:a5e50f8282e18033cc7f14a529be1b073 inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Please note that, this node can only uplink to <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a>. </p>
+<div class="textblock"><p>Please note that, this node can only uplink to <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a>, and is_single_beam_output should be false. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="add8f0d012ade17ab3b371e89f88af36a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add8f0d012ade17ab3b371e89f88af36a">&#9670;&nbsp;</a></span>Create() <span class="overload">[1/3]</span></h2>
@@ -254,11 +253,12 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Create a <a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html">SnowboyMbDoaKwsNode</a> instance. Do multi-beam keyword(hotword triggering) search with Snowboy KWS Engine and DoA (direction of arrival). Different with <code><a class="el" href="classrespeaker_1_1Snowboy1bDoaKwsNode.html">Snowboy1bDoaKwsNode</a></code>, <code><a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html">SnowboyMbDoaKwsNode</a></code> provides more accurate DoA, hence it requires more calculation.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">snowboy_resource_path</td><td></td></tr>
-    <tr><td class="paramname">snowboy_model_path</td><td></td></tr>
-    <tr><td class="paramname">snowboy_sensitivity</td><td>- [0.1, 0.9], but in string format.</td></tr>
+    <tr><td class="paramname">snowboy_resource_path</td><td>- The path of snowboy resource. </td></tr>
+    <tr><td class="paramname">snowboy_model_path</td><td>- The path of snowboy model. </td></tr>
+    <tr><td class="paramname">snowboy_sensitivity</td><td>- [0.1, 0.9], but in string format. The higher the sensitivity, the higher the trigger rate. Default to 0.5.</td></tr>
   </table>
   </dd>
 </dl>
@@ -313,10 +313,14 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">underclocking_count</td><td>- the count of input block this node will wait before processing and passing down. </td></tr>
+    <tr><td class="paramname">snowboy_resource_path</td><td>- The path of snowboy resource. </td></tr>
+    <tr><td class="paramname">snowboy_model_path</td><td>- The path of snowboy model. </td></tr>
+    <tr><td class="paramname">snowboy_sensitivity</td><td>- [0.1, 0.9], but in string format. The higher the sensitivity, the higher the trigger rate. Default to 0.5. </td></tr>
+    <tr><td class="paramname">underclocking_count</td><td>- the count of input block this node will wait before processing and passing down.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>SnowboyMbDoaKwsNode* </dd></dl>
 
 </div>
 </div>
@@ -379,7 +383,11 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable_agc</td><td>- enable automatic gain control </td></tr>
+    <tr><td class="paramname">snowboy_resource_path</td><td>- The path of snowboy resource. </td></tr>
+    <tr><td class="paramname">snowboy_model_path</td><td>- The path of snowboy model. </td></tr>
+    <tr><td class="paramname">snowboy_sensitivity</td><td>- [0.1, 0.9], but in string format. The higher the sensitivity, the higher the trigger rate. Default to 0.5. </td></tr>
+    <tr><td class="paramname">underclocking_count</td><td>- the count of input block this node will wait before processing and passing down. </td></tr>
+    <tr><td class="paramname">enable_agc</td><td>- enable automatic gain control. </td></tr>
     <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data. At most time, we don't have to set it true in this node. Because the output data has only one channel(beam).</td></tr>
   </table>
   </dd>
@@ -605,6 +613,35 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 
 </div>
 </div>
+<a id="a3eee5ab58827750efe28caf92044a500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eee5ab58827750efe28caf92044a500">&#9670;&nbsp;</a></span>SetDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void respeaker::SnowboyMbDoaKwsNode::SetDirection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Doesn't work now. Please use SetBeanNum() to select the output beam. </p>
+
+<p>Implements <a class="el" href="classrespeaker_1_1DirectionManagerNode.html#a6ea87b631500d76b7ba11b998fb665af">respeaker::DirectionManagerNode</a>.</p>
+
+</div>
+</div>
 <a id="ad4e76a94399d60faf4c672d1d3f24802"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4e76a94399d60faf4c672d1d3f24802">&#9670;&nbsp;</a></span>SetDoAecWhenListen()</h2>
 
@@ -628,10 +665,9 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the angle for microphone 0, if it's not <code>0</code> for the board. For <a class="el" href="classrespeaker_1_1ReSpeaker.html">ReSpeaker</a> v2, this should be <code>30</code>.</p>
+<p>Whether or not do AEC when the state machine is in LISTEN* state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">angle</td><td>- degree Whether or not do AEC when the state machine is in LISTEN* state.</td></tr>
     <tr><td class="paramname">do_aec_when_listen</td><td>- The default is true. </td></tr>
   </table>
   </dd>

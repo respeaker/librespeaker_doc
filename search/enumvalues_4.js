@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['listen_5fquietly',['LISTEN_QUIETLY',['../namespacerespeaker.html#a5372a69a95f6fd5424740ce4157651d9a18ae168cad5ca69fdc8873791fcfb6cc',1,'respeaker']]],
-  ['listen_5fwith_5fbgm',['LISTEN_WITH_BGM',['../namespacerespeaker.html#a5372a69a95f6fd5424740ce4157651d9ad6b5ce32ae55984baa35cd408b395809',1,'respeaker']]]
+  ['error_5flog_5flevel',['ERROR_LOG_LEVEL',['../namespacerespeaker.html#a20e1a7db6be2c508966379af4c46db3da7f09328c777b53477265417a559bf3ea',1,'respeaker']]]
 ];

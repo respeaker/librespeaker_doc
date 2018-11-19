@@ -135,10 +135,9 @@ std::queue&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign=
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac50b5f2701d8ab1f9eac4766726ed1da"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#ac50b5f2701d8ab1f9eac4766726ed1da">Create</a> (MicType mic_type, bool is_single_beam_output, int ref_channel_index)</td></tr>
+<tr class="memitem:ac50b5f2701d8ab1f9eac4766726ed1da"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#ac50b5f2701d8ab1f9eac4766726ed1da">Create</a> (<a class="el" href="namespacerespeaker.html#a1b7f3a87bb8eda23643d6367f08ebe44">MicType</a> mic_type, bool is_single_beam_output, int ref_channel_index)</td></tr>
 <tr class="separator:ac50b5f2701d8ab1f9eac4766726ed1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec40b11bde7c483ff9160b58e6670669"><td class="memItemLeft" align="right" valign="top"><a id="aec40b11bde7c483ff9160b58e6670669"></a>
-static <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (MicType mic_type, bool is_single_beam_output, int ref_channel_index, bool enable_wav_log)</td></tr>
+<tr class="memitem:aec40b11bde7c483ff9160b58e6670669"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html#aec40b11bde7c483ff9160b58e6670669">Create</a> (<a class="el" href="namespacerespeaker.html#a1b7f3a87bb8eda23643d6367f08ebe44">MicType</a> mic_type, bool is_single_beam_output, int ref_channel_index, bool enable_wav_log)</td></tr>
 <tr class="separator:aec40b11bde7c483ff9160b58e6670669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -196,7 +195,7 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac50b5f2701d8ab1f9eac4766726ed1da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac50b5f2701d8ab1f9eac4766726ed1da">&#9670;&nbsp;</a></span>Create()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50b5f2701d8ab1f9eac4766726ed1da">&#9670;&nbsp;</a></span>Create() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +206,7 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
         <tr>
           <td class="memname">static <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a>* respeaker::VepAecBeamformingNode::Create </td>
           <td>(</td>
-          <td class="paramtype">MicType&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacerespeaker.html#a1b7f3a87bb8eda23643d6367f08ebe44">MicType</a>&#160;</td>
           <td class="paramname"><em>mic_type</em>, </td>
         </tr>
         <tr>
@@ -234,12 +233,70 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Create a <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> instance. Do beamforming and AEC (acoustic echo cancellation) on the input audio stream, output the most proper beam(single-beam) or all the beams(multi-beam).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mic_type</td><td>- Specify the microphone type, for example: <a class="el" href="classrespeaker_1_1ReSpeaker.html">ReSpeaker</a> Core v2 is CIRCULAR_6MIC, and <a class="el" href="classrespeaker_1_1ReSpeaker.html">ReSpeaker</a> 4-Mic Linear Array Kit for Raspberry Pi is LINEAR_4MIC. </td></tr>
-    <tr><td class="paramname">bool</td><td>is_single_beam_output - </td></tr>
+    <tr><td class="paramname">mic_type</td><td>- Specify the microphone type. </td></tr>
+    <tr><td class="paramname">is_single_beam_output</td><td>- Specify output single-beam(the most proper beam) or multi-beam(all the beams). </td></tr>
+    <tr><td class="paramname">ref_channel_index</td><td>- Please note that the channel index starts from <code>0</code>. For <a class="el" href="classrespeaker_1_1ReSpeaker.html">ReSpeaker</a> v2, it's better to specify <code>6</code> here.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>VepAecBeamformingNode* </dd></dl>
+
+</div>
+</div>
+<a id="aec40b11bde7c483ff9160b58e6670669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec40b11bde7c483ff9160b58e6670669">&#9670;&nbsp;</a></span>Create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a>* respeaker::VepAecBeamformingNode::Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacerespeaker.html#a1b7f3a87bb8eda23643d6367f08ebe44">MicType</a>&#160;</td>
+          <td class="paramname"><em>mic_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_single_beam_output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ref_channel_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable_wav_log</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mic_type</td><td>- Specify the microphone type. </td></tr>
+    <tr><td class="paramname">is_single_beam_output</td><td>- Specify output single-beam(the most proper beam) or multi-beam(all the beams). </td></tr>
     <tr><td class="paramname">ref_channel_index</td><td>- Please note that the channel index starts from <code>0</code>. For <a class="el" href="classrespeaker_1_1ReSpeaker.html">ReSpeaker</a> v2, it's better to specify <code>6</code> here. </td></tr>
-    <tr><td class="paramname">enable_wav_log</td><td>-</td></tr>
+    <tr><td class="paramname">enable_wav_log</td><td>- Set it true to save all the input channels and output beams into wav files(for debug), default to false.</td></tr>
   </table>
   </dd>
 </dl>
@@ -373,7 +430,7 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the angle for microphone 0, if it's not <code>0</code> for the board. For <a class="el" href="classrespeaker_1_1ReSpeaker.html">ReSpeaker</a> v2, this should be <code>30</code>. Only works for circular microphone array.</p>
+<p>Set the angle for microphone 0, if it's not <code>0</code> for the board. Only works for circular microphone array.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">angle</td><td>- degree </td></tr>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['node_5ftype',['node_type',['../structrespeaker_1_1NodeParameter.html#a36f265b643401065f457ef8bf48038d5',1,'respeaker::NodeParameter']]],
-  ['num_5fchannel',['num_channel',['../structrespeaker_1_1NodeParameter.html#aeffb59f023a7bacddbf7c4db2fd13c86',1,'respeaker::NodeParameter']]]
+  ['init_5fflag',['init_flag',['../structrespeaker_1_1MicTypeInfo__.html#a044cb3cd74ba8a9e4ab4726d97209c1c',1,'respeaker::MicTypeInfo_']]],
+  ['interleaved',['interleaved',['../structrespeaker_1_1NodeParameter.html#acfdf461dfbe3b14d0baa6956ee57cc70',1,'respeaker::NodeParameter']]]
 ];

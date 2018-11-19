@@ -72,41 +72,55 @@ $(function() {
 <div class="title">respeaker::MicTypeInfo_ Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="mic__type__info_8h_source.html">mic_type_info.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa5b6c30e0155f77a16bb0a4e72d44a1d"><td class="memItemLeft" align="right" valign="top"><a id="aa5b6c30e0155f77a16bb0a4e72d44a1d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>num_of_mics</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#aa5b6c30e0155f77a16bb0a4e72d44a1d">num_of_mics</a></td></tr>
+<tr class="memdesc:aa5b6c30e0155f77a16bb0a4e72d44a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This number doesn't contain ref-channel, the ref-channel needs to specify when create node. <br /></td></tr>
 <tr class="separator:aa5b6c30e0155f77a16bb0a4e72d44a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab572b006d56b0b393c352955ba590abc"><td class="memItemLeft" align="right" valign="top"><a id="ab572b006d56b0b393c352955ba590abc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>num_of_beams</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#ab572b006d56b0b393c352955ba590abc">num_of_beams</a></td></tr>
+<tr class="memdesc:ab572b006d56b0b393c352955ba590abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equal to (num_of_directional_beams + num_of_auxiliary_beams) <br /></td></tr>
 <tr class="separator:ab572b006d56b0b393c352955ba590abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5edb833c1a1c5e24b974378150929574"><td class="memItemLeft" align="right" valign="top"><a id="a5edb833c1a1c5e24b974378150929574"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>num_of_directional_beams</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#a5edb833c1a1c5e24b974378150929574">num_of_directional_beams</a></td></tr>
+<tr class="memdesc:a5edb833c1a1c5e24b974378150929574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of directional beamforming beams. <br /></td></tr>
 <tr class="separator:a5edb833c1a1c5e24b974378150929574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14fe1567d09680c8c98c823c627e2a31"><td class="memItemLeft" align="right" valign="top"><a id="a14fe1567d09680c8c98c823c627e2a31"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>num_of_auxiliary_beams</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#a14fe1567d09680c8c98c823c627e2a31">num_of_auxiliary_beams</a></td></tr>
+<tr class="memdesc:a14fe1567d09680c8c98c823c627e2a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of auxiliary non-beamforming beams. <br /></td></tr>
 <tr class="separator:a14fe1567d09680c8c98c823c627e2a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0aeb9dc1a2404d64ce6f526cce39100"><td class="memItemLeft" align="right" valign="top"><a id="ad0aeb9dc1a2404d64ce6f526cce39100"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>num_of_central_mics</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#ad0aeb9dc1a2404d64ce6f526cce39100">num_of_central_mics</a></td></tr>
+<tr class="memdesc:ad0aeb9dc1a2404d64ce6f526cce39100"><td class="mdescLeft">&#160;</td><td class="mdescRight">For some kinds of circular microphone array, there is 1 central microphone on the plane. <br /></td></tr>
 <tr class="separator:ad0aeb9dc1a2404d64ce6f526cce39100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a12aa46228d953b2fb1a4bab53470de"><td class="memItemLeft" align="right" valign="top"><a id="a0a12aa46228d953b2fb1a4bab53470de"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>geometries</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#a0a12aa46228d953b2fb1a4bab53470de">geometries</a></td></tr>
+<tr class="memdesc:a0a12aa46228d953b2fb1a4bab53470de"><td class="mdescLeft">&#160;</td><td class="mdescRight">0 for circular, 1 for linear <br /></td></tr>
 <tr class="separator:a0a12aa46228d953b2fb1a4bab53470de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ab9b324af9d49ea5bf0c2d77f61e807"><td class="memItemLeft" align="right" valign="top"><a id="a5ab9b324af9d49ea5bf0c2d77f61e807"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pick_up_voice_degree</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#a5ab9b324af9d49ea5bf0c2d77f61e807">pick_up_voice_degree</a></td></tr>
+<tr class="memdesc:a5ab9b324af9d49ea5bf0c2d77f61e807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Circular Mic Array can do 360 degree voice pick-up, while Linear Array can do 180 degree voice pick-up. <br /></td></tr>
 <tr class="separator:a5ab9b324af9d49ea5bf0c2d77f61e807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85ad362ebaf04984e6db700989adae81"><td class="memItemLeft" align="right" valign="top"><a id="a85ad362ebaf04984e6db700989adae81"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#a85ad362ebaf04984e6db700989adae81">frame</a></td></tr>
+<tr class="memdesc:a85ad362ebaf04984e6db700989adae81"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of int16 buffer: mic/spk/mout, should be equal to num_of_beams * frame_cnt_per_beam(=128) <br /></td></tr>
 <tr class="separator:a85ad362ebaf04984e6db700989adae81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a044cb3cd74ba8a9e4ab4726d97209c1c"><td class="memItemLeft" align="right" valign="top"><a id="a044cb3cd74ba8a9e4ab4726d97209c1c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>init_flag</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#a044cb3cd74ba8a9e4ab4726d97209c1c">init_flag</a></td></tr>
+<tr class="memdesc:a044cb3cd74ba8a9e4ab4726d97209c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this flag to true when finish setting params. <br /></td></tr>
 <tr class="separator:a044cb3cd74ba8a9e4ab4726d97209c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a9acbbd878ef02467e2aece27a7c2c0"><td class="memItemLeft" align="right" valign="top"><a id="a6a9acbbd878ef02467e2aece27a7c2c0"></a>
-MicType&#160;</td><td class="memItemRight" valign="bottom"><b>mic_type</b></td></tr>
+<a class="el" href="namespacerespeaker.html#a1b7f3a87bb8eda23643d6367f08ebe44">MicType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrespeaker_1_1MicTypeInfo__.html#a6a9acbbd878ef02467e2aece27a7c2c0">mic_type</a></td></tr>
+<tr class="memdesc:a6a9acbbd878ef02467e2aece27a7c2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of microphone. <br /></td></tr>
 <tr class="separator:a6a9acbbd878ef02467e2aece27a7c2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The data structure which contains the information of a microphone array </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>/home/gitlab-runner/builds/dc7d1974/0/seeedstudio/librespeaker/include/chain_nodes/<a class="el" href="mic__type__info_8h_source.html">mic_type_info.h</a></li>
 </ul>
 </div><!-- contents -->

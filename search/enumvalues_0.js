@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debug_5flog_5flevel',['DEBUG_LOG_LEVEL',['../namespacerespeaker.html#a20e1a7db6be2c508966379af4c46db3da564b3555c691282f8258d64fe7d03c6f',1,'respeaker']]]
+  ['alsa_5fcollector_5fnode',['ALSA_COLLECTOR_NODE',['../namespacerespeaker.html#a1f207751fb0d84d3e943e8634c33b7d1a2fa28f4eed18abae9462855586f0474c',1,'respeaker']]]
 ];

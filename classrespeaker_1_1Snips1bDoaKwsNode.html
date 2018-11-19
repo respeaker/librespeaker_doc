@@ -105,8 +105,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8d307aeeac55b7ddf1fda17a5727ee9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9a445beb4758b34ef42976721310c0b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html#ad9a445beb4758b34ef42976721310c0b">GetDirection</a> ()=0</td></tr>
 <tr class="separator:ad9a445beb4758b34ef42976721310c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a641e1999033e5f1d791f77eb175028e5"><td class="memItemLeft" align="right" valign="top"><a id="a641e1999033e5f1d791f77eb175028e5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDirection</b> (int dir)=0</td></tr>
+<tr class="memitem:a641e1999033e5f1d791f77eb175028e5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html#a641e1999033e5f1d791f77eb175028e5">SetDirection</a> (int dir)=0</td></tr>
 <tr class="separator:a641e1999033e5f1d791f77eb175028e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec926e11eb8d2809fc771a722369a7a2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html#aec926e11eb8d2809fc771a722369a7a2">HotwordDetected</a> ()=0</td></tr>
 <tr class="separator:aec926e11eb8d2809fc771a722369a7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,8 +151,7 @@ std::queue&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign=
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2de1c88f779146dd29ecccb92d160bd0"><td class="memItemLeft" align="right" valign="top"><a id="a2de1c88f779146dd29ecccb92d160bd0"></a>
-static <a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html">Snips1bDoaKwsNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (std::string snips_model_path, float snips_sensitivity, bool enable_agc, bool output_interleaved=false)</td></tr>
+<tr class="memitem:a2de1c88f779146dd29ecccb92d160bd0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html">Snips1bDoaKwsNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html#a2de1c88f779146dd29ecccb92d160bd0">Create</a> (std::string snips_model_path, float snips_sensitivity, bool enable_agc, bool output_interleaved=false)</td></tr>
 <tr class="separator:a2de1c88f779146dd29ecccb92d160bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -210,8 +208,67 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 <tr class="separator:a5e50f8282e18033cc7f14a529be1b073 inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Please note that, this node can only uplink to <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a>. </p>
+<div class="textblock"><p>Please note that, this node can only uplink to <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> and is_single_beam_output should be true. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2de1c88f779146dd29ecccb92d160bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de1c88f779146dd29ecccb92d160bd0">&#9670;&nbsp;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html">Snips1bDoaKwsNode</a>* respeaker::Snips1bDoaKwsNode::Create </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>snips_model_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>snips_sensitivity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable_agc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>output_interleaved</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create a <a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html">Snips1bDoaKwsNode</a> instance. Do single-beam keyword(hotword triggering) search with Snips KWS Engine and DoA (direction of arrival).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">snips_model_path</td><td>- The path of snips model. </td></tr>
+    <tr><td class="paramname">snips_sensitivity</td><td>- [0.1, 0.9] in float format. The higher the sensitivity, the higher the trigger rate. Default to 0.5. </td></tr>
+    <tr><td class="paramname">enable_agc</td><td>- enable Automatic Gain Control. </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data. At most time, we don't have to set it true in this node. Because the output data has only one channel(beam).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Snips1bDoaKwsNode* </dd></dl>
+
+</div>
+</div>
 <a id="a10ec8598b0ea38fd66c14ec8561c324d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10ec8598b0ea38fd66c14ec8561c324d">&#9670;&nbsp;</a></span>DisableAutoStateTransfer()</h2>
 
@@ -426,6 +483,35 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a641e1999033e5f1d791f77eb175028e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a641e1999033e5f1d791f77eb175028e5">&#9670;&nbsp;</a></span>SetDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void respeaker::Snips1bDoaKwsNode::SetDirection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Doesn't work now. Please use SetBeanNum() to select the output beam. </p>
+
+<p>Implements <a class="el" href="classrespeaker_1_1DirectionManagerNode.html#a6ea87b631500d76b7ba11b998fb665af">respeaker::DirectionManagerNode</a>.</p>
 
 </div>
 </div>

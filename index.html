@@ -75,15 +75,19 @@ $(function() {
 <p>The list of nodes:</p><ul>
 <li><a class="el" href="classrespeaker_1_1PulseCollectorNode.html">respeaker::PulseCollectorNode</a> - collect the audio data from PulseAudio</li>
 <li><a class="el" href="classrespeaker_1_1AlsaCollectorNode.html">respeaker::AlsaCollectorNode</a> - collect the audio data from Alsa directly</li>
+<li><a class="el" href="classrespeaker_1_1FileCollectorNode.html">respeaker::FileCollectorNode</a> - collect the audio data from a given *.wav file</li>
 <li><a class="el" href="classrespeaker_1_1SelectorNode.html">respeaker::SelectorNode</a> - select specified channels from the input stream, and output with same rate and format.</li>
 <li><a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">respeaker::VepAecBeamformingNode</a> - do beamforming and AEC (acoustic echo cancellation)</li>
-<li><a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html">respeaker::SnowboyMbDoaKwsNode</a> - do DoA (direction of arrival) and keyword search (hotword triggering)</li>
+<li><a class="el" href="classrespeaker_1_1Snowboy1bDoaKwsNode.html">respeaker::Snowboy1bDoaKwsNode</a> - do single-beam keyword(hotword triggering) search with Snowboy KWS Engine and DoA (direction of arrival)</li>
+<li><a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html">respeaker::SnowboyMbDoaKwsNode</a> - do multi-beam keyword search with Snowboy KWS Engine and DoA, note that this node only works on ReSpeaker Core v2</li>
+<li><a class="el" href="classrespeaker_1_1SnowboyManKwsNode.html">respeaker::SnowboyManKwsNode</a> - this node don't do DoA, you need to select the beam manually to pick the voice audio.</li>
+<li><a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html">respeaker::Snips1bDoaKwsNode</a> - do single-beam keyword search with Snips KWS Engine and DoA</li>
+<li><a class="el" href="classrespeaker_1_1SnipsManBeamKwsNode.html">respeaker::SnipsManBeamKwsNode</a> - this node don't do DoA, you need to select the beam manually to pick the voice audio.</li>
 <li><a class="el" href="classrespeaker_1_1HybridNode.html">respeaker::HybridNode</a> - do hybrid algorithms to the input stream, including NS (noise suppression), AGC (automatic gain control), etc...</li>
-<li><a class="el" href="classrespeaker_1_1SnowboyManKwsNode.html">respeaker::SnowboyManKwsNode</a> - This node don't do DoA, you need to set the direction manually to pick the voice audio.</li>
 <li>may have more in the future</li>
 </ul>
 <p>Each node inherits from one or more interface classes:</p><ul>
-<li><a class="el" href="classrespeaker_1_1BaseNode.html">respeaker::BaseNode</a> - defines the basic behaviours of a node, including fetch/process/store data block, thread start /stop, etc...</li>
+<li><a class="el" href="classrespeaker_1_1BaseNode.html">respeaker::BaseNode</a> - defines the basic behaviours of a node, including fetch/process/store data block, thread start/stop, etc...</li>
 <li><a class="el" href="classrespeaker_1_1DirectionManagerNode.html">respeaker::DirectionManagerNode</a> - defines an interface of getting DoA result and setting direction</li>
 <li><a class="el" href="classrespeaker_1_1HotwordDetectionNode.html">respeaker::HotwordDetectionNode</a> - defines an interface of getting hotword trigger event</li>
 </ul>

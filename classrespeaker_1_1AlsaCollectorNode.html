@@ -231,12 +231,12 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create a <a class="el" href="classrespeaker_1_1AlsaCollectorNode.html">AlsaCollectorNode</a> instance.</p>
+<p>Create a <a class="el" href="classrespeaker_1_1AlsaCollectorNode.html">AlsaCollectorNode</a> instance. Collect 8 channels audio data stream from Alsa directly.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pcm_device_name</td><td></td></tr>
-    <tr><td class="paramname">rate</td><td></td></tr>
-    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data</td></tr>
+    <tr><td class="paramname">pcm_device_name</td><td>- Users can obtain this by <code>arecord -L</code>. </td></tr>
+    <tr><td class="paramname">rate</td><td>- Set the recording sample rate of your board, and <a class="el" href="classrespeaker_1_1AlsaCollectorNode.html">AlsaCollectorNode</a> will resample the recordings to 16KHz. For now, the sample rate is fixed in 48000(Hz). User should not change this value. </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data.</td></tr>
   </table>
   </dd>
 </dl>
@@ -291,14 +291,14 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pcm_device_name</td><td></td></tr>
-    <tr><td class="paramname">rate</td><td></td></tr>
-    <tr><td class="paramname">block_len_ms</td><td>- The output block time length, in milliseconds </td></tr>
-    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data</td></tr>
+    <tr><td class="paramname">pcm_device_name</td><td>- Users can obtain this by <code>arecord -L</code>. </td></tr>
+    <tr><td class="paramname">rate</td><td>- Set the recording sample rate of your board, and <a class="el" href="classrespeaker_1_1AlsaCollectorNode.html">AlsaCollectorNode</a> will resample the recordings to 16KHz. For now, the sample rate is fixed in 48000(Hz). User should not change this value. </td></tr>
+    <tr><td class="paramname">block_len_ms</td><td>- The output block time length, in milliseconds. For now, block_len_ms is fixed in 8(ms). User should not change this value. </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>PulseCollectorNode* </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>AlsaCollectorNode* </dd></dl>
 
 </div>
 </div>

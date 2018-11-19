@@ -225,11 +225,11 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create a <a class="el" href="classrespeaker_1_1FileCollectorNode.html">FileCollectorNode</a> instance.</p>
+<p>Create a <a class="el" href="classrespeaker_1_1FileCollectorNode.html">FileCollectorNode</a> instance. Collect the audio data from a given 8 channels *.wav file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wav_file_path</td><td></td></tr>
-    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data</td></tr>
+    <tr><td class="paramname">wav_file_path</td><td>- The path of the 8 channels *.wav file. </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data.</td></tr>
   </table>
   </dd>
 </dl>
@@ -278,9 +278,9 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wav_file_path</td><td></td></tr>
-    <tr><td class="paramname">block_len_ms</td><td>- The output block time length, in milliseconds </td></tr>
-    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data</td></tr>
+    <tr><td class="paramname">wav_file_path</td><td>- The path of the 8 channels *.wav file. </td></tr>
+    <tr><td class="paramname">block_len_ms</td><td>- The output block time length, in milliseconds. Default to 8(ms). </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data.</td></tr>
   </table>
   </dd>
 </dl>

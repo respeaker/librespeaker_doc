@@ -135,8 +135,7 @@ std::queue&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign=
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6e136a9a9f5469fe947a58af4b0b16b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1PulseCollectorNode.html#ae6e136a9a9f5469fe947a58af4b0b16b">Create</a> (std::string source_name, int rate, bool output_interleaved=false)</td></tr>
 <tr class="separator:ae6e136a9a9f5469fe947a58af4b0b16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ddf4fe6434a2752ccde426b91f94643"><td class="memItemLeft" align="right" valign="top"><a id="a4ddf4fe6434a2752ccde426b91f94643"></a>
-static <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Create_48Kto16K</b> (std::string source_name, int block_len_ms, bool output_interleaved=false)</td></tr>
+<tr class="memitem:a4ddf4fe6434a2752ccde426b91f94643"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1PulseCollectorNode.html#a4ddf4fe6434a2752ccde426b91f94643">Create_48Kto16K</a> (std::string source_name, int block_len_ms, bool output_interleaved=false)</td></tr>
 <tr class="separator:a4ddf4fe6434a2752ccde426b91f94643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedf8aaf43eef6cafe2f6d488d955d574"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrespeaker_1_1PulseCollectorNode.html#aedf8aaf43eef6cafe2f6d488d955d574">Create</a> (std::string source_name, int rate, int block_len_ms, bool output_interleaved=false)</td></tr>
 <tr class="separator:aedf8aaf43eef6cafe2f6d488d955d574"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,12 +233,12 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create a <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> instance.</p>
+<p>Create a <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> instance. Collect 8 channels audio data stream from PulseAudio server.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source_name</td><td>- Users can obtain this by <code>pactl list sources</code> </td></tr>
-    <tr><td class="paramname">rate</td><td>- Set the recording sample rate of your board, and <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> will resample the recordings to 16KHz </td></tr>
-    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data</td></tr>
+    <tr><td class="paramname">source_name</td><td>- Users can obtain this by <code>pactl list sources</code>. </td></tr>
+    <tr><td class="paramname">rate</td><td>- Set the recording sample rate of your board, and <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> will resample the recordings to 16KHz. For now, the sample rate is fixed in 48000(Hz). User should not change this value. </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data.</td></tr>
   </table>
   </dd>
 </dl>
@@ -294,10 +293,61 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source_name</td><td></td></tr>
-    <tr><td class="paramname">rate</td><td></td></tr>
-    <tr><td class="paramname">block_len_ms</td><td>- The output block time length, in milliseconds </td></tr>
-    <tr><td class="paramname">output_interleaved</td><td></td></tr>
+    <tr><td class="paramname">source_name</td><td>- Users can obtain this by <code>pactl list sources</code>. </td></tr>
+    <tr><td class="paramname">rate</td><td>- Set the recording sample rate of your board, and <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a> will resample the recordings to 16KHz. For now, the sample rate is fixed in 48000(Hz). User should not change this value. </td></tr>
+    <tr><td class="paramname">block_len_ms</td><td>- The output block time length, in milliseconds. For now, block_len_ms is fixed in 8(ms). </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>PulseCollectorNode* </dd></dl>
+
+</div>
+</div>
+<a id="a4ddf4fe6434a2752ccde426b91f94643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddf4fe6434a2752ccde426b91f94643">&#9670;&nbsp;</a></span>Create_48Kto16K()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classrespeaker_1_1PulseCollectorNode.html">PulseCollectorNode</a>* respeaker::PulseCollectorNode::Create_48Kto16K </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>source_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>block_len_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>output_interleaved</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_name</td><td>- Users can obtain this by <code>pactl list sources</code>. </td></tr>
+    <tr><td class="paramname">block_len_ms</td><td>- The output block time length, in milliseconds. For now, block_len_ms is fixed in 8(ms). </td></tr>
+    <tr><td class="paramname">output_interleaved</td><td>- Set it true to output interleaved data, false to output deinterleaved data.</td></tr>
   </table>
   </dd>
 </dl>

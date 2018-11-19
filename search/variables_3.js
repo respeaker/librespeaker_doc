@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interleaved',['interleaved',['../structrespeaker_1_1NodeParameter.html#acfdf461dfbe3b14d0baa6956ee57cc70',1,'respeaker::NodeParameter']]]
+  ['frame',['frame',['../structrespeaker_1_1MicTypeInfo__.html#a85ad362ebaf04984e6db700989adae81',1,'respeaker::MicTypeInfo_']]]
 ];
