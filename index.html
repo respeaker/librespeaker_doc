@@ -73,23 +73,24 @@ $(function() {
 <h2>Audio processing chain</h2>
 <p>Namely the chain consists of several nodes which link together in a user specified order. A node can be considered as a blackbox which has input and output, and internally applies filter algorithms to the audio stream passing through. The input / output is a <code>block</code> of audio data, which is specified by some parameters. See <a class="el" href="structrespeaker_1_1NodeParameter.html">respeaker::NodeParameter</a>. Please note that some nodes may accept particular length of block, e.g. the <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">respeaker::VepAecBeamformingNode</a> accepts only 8 milliseconds block, this is decided by the algorithms. Generally users don't need to specially care about these restrictions, as we utilized the nodes into another application - named <code>respeakerd</code>, which is a typicall server application for the ReSpeaker v2 hardware with tuned configurations.</p>
 <p>The list of nodes:</p><ul>
-<li><a class="el" href="classrespeaker_1_1PulseCollectorNode.html">respeaker::PulseCollectorNode</a> - collect the audio data from PulseAudio</li>
-<li><a class="el" href="classrespeaker_1_1AlsaCollectorNode.html">respeaker::AlsaCollectorNode</a> - collect the audio data from Alsa directly</li>
-<li><a class="el" href="classrespeaker_1_1FileCollectorNode.html">respeaker::FileCollectorNode</a> - collect the audio data from a given *.wav file</li>
+<li><a class="el" href="classrespeaker_1_1PulseCollectorNode.html">respeaker::PulseCollectorNode</a> - collect the audio data from PulseAudio.</li>
+<li><a class="el" href="classrespeaker_1_1AlsaCollectorNode.html">respeaker::AlsaCollectorNode</a> - collect the audio data from Alsa directly.</li>
+<li><a class="el" href="classrespeaker_1_1FileCollectorNode.html">respeaker::FileCollectorNode</a> - collect the audio data from a given *.wav file.</li>
 <li><a class="el" href="classrespeaker_1_1SelectorNode.html">respeaker::SelectorNode</a> - select specified channels from the input stream, and output with same rate and format.</li>
-<li><a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">respeaker::VepAecBeamformingNode</a> - do beamforming and AEC (acoustic echo cancellation)</li>
-<li><a class="el" href="classrespeaker_1_1Snowboy1bDoaKwsNode.html">respeaker::Snowboy1bDoaKwsNode</a> - do single-beam keyword(hotword triggering) search with Snowboy KWS Engine and DoA (direction of arrival)</li>
-<li><a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html">respeaker::SnowboyMbDoaKwsNode</a> - do multi-beam keyword search with Snowboy KWS Engine and DoA, note that this node only works on ReSpeaker Core v2</li>
+<li><a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">respeaker::VepAecBeamformingNode</a> - do beamforming, AEC(acoustic echo cancellation), NR(noise reduction) and a part of DOA(direction of arrival) on the input audio stream,output the most proper beam(single-beam) or all the beams(multi-beam). These algorithms are provided by Alango.</li>
+<li><a class="el" href="classrespeaker_1_1Snowboy1bDoaKwsNode.html">respeaker::Snowboy1bDoaKwsNode</a> - do single-beam keyword(hotword triggering) search with Snowboy KWS Engine and DoA (direction of arrival) and VAD(Voice available detection).</li>
+<li><a class="el" href="classrespeaker_1_1SnowboyMbDoaKwsNode.html">respeaker::SnowboyMbDoaKwsNode</a> - do multi-beam keyword search with Snowboy KWS Engine and DoA and VAD(Voice available detection), note that this node only works on ReSpeaker Core v2.</li>
 <li><a class="el" href="classrespeaker_1_1SnowboyManKwsNode.html">respeaker::SnowboyManKwsNode</a> - this node don't do DoA, you need to select the beam manually to pick the voice audio.</li>
-<li><a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html">respeaker::Snips1bDoaKwsNode</a> - do single-beam keyword search with Snips KWS Engine and DoA</li>
+<li><a class="el" href="classrespeaker_1_1Snips1bDoaKwsNode.html">respeaker::Snips1bDoaKwsNode</a> - do single-beam keyword search with Snips KWS Engine and DoA.</li>
 <li><a class="el" href="classrespeaker_1_1SnipsManBeamKwsNode.html">respeaker::SnipsManBeamKwsNode</a> - this node don't do DoA, you need to select the beam manually to pick the voice audio.</li>
-<li><a class="el" href="classrespeaker_1_1HybridNode.html">respeaker::HybridNode</a> - do hybrid algorithms to the input stream, including NS (noise suppression), AGC (automatic gain control), etc...</li>
+<li><a class="el" href="classrespeaker_1_1HybridNode.html">respeaker::HybridNode</a> - provide NS(Noise suppresstion), AGC(Automatic gain control) and VAD(Voice available detection) from WebRTC library.</li>
+<li><a class="el" href="classrespeaker_1_1AloopOutputNode.html">respeaker::AloopOutputNode</a> - output audio stream to a specific Alsa device(eg. "hw:Loopback,0,0").</li>
 <li>may have more in the future</li>
 </ul>
 <p>Each node inherits from one or more interface classes:</p><ul>
 <li><a class="el" href="classrespeaker_1_1BaseNode.html">respeaker::BaseNode</a> - defines the basic behaviours of a node, including fetch/process/store data block, thread start/stop, etc...</li>
-<li><a class="el" href="classrespeaker_1_1DirectionManagerNode.html">respeaker::DirectionManagerNode</a> - defines an interface of getting DoA result and setting direction</li>
-<li><a class="el" href="classrespeaker_1_1HotwordDetectionNode.html">respeaker::HotwordDetectionNode</a> - defines an interface of getting hotword trigger event</li>
+<li><a class="el" href="classrespeaker_1_1DirectionManagerNode.html">respeaker::DirectionManagerNode</a> - defines an interface of getting DoA result and setting direction.</li>
+<li><a class="el" href="classrespeaker_1_1HotwordDetectionNode.html">respeaker::HotwordDetectionNode</a> - defines an interface of getting hotword trigger event.</li>
 </ul>
 <p>The nodes are linked together by calling the <code>Uplink</code> method, please see the examples to know how to link up.</p>
 <p>There's a data structure shared between all the nodes of the chain - <a class="el" href="structrespeaker_1_1ChainSharedData.html">respeaker::ChainSharedData</a>. This structure is used to pass status through the chain, the status are:</p><ul>
@@ -109,7 +110,7 @@ $(function() {
 <p>After all these done, we have a topological graph like this (this is an exmaple):</p>
 <div class="fragment"><div class="line">+--------------+         +---------------+         +-----------+</div><div class="line">|collector node| +-----&gt; |processing node+-------&gt; |output node|</div><div class="line">+------+-------+ |       +---------------+         +-----+-----+</div><div class="line">       |         |                       |               |</div><div class="line">       |         |       +------------+  |               |</div><div class="line">       |         +-----&gt; |event node  |  |               |</div><div class="line">       |                 +------+-----+  |               |</div><div class="line">       |                        |        |               |</div><div class="line">       |                        |        |               |</div><div class="line">+------v------------------------v--------v---------------v-----+</div><div class="line">|                         supervisor                           |</div><div class="line">+--------------------------------------------------------------+</div></div><!-- fragment --><p>Then we call the <code>Start</code> method of the supervisor to start the threads and processing, and call other methods like <code>DetectHotword</code> or <code>Listen</code> to get the outputs. Please see <a class="el" href="classrespeaker_1_1ReSpeaker.html">respeaker::ReSpeaker</a> to know the methods it provides.</p>
 <h2>Next Step</h2>
-<p>Please briefly see each class's methods, and then go to the examples. </p>
+<p>Please briefly see each class's methods, and then go to the examples. To compile the examples: g++ EXAMPLE_NAME.cc -o EXAMPLE_NAME -lrespeaker -lsndfile -fPIC -std=c++11 -fpermissive -I/usr/include/respeaker/ -DWEBRTC_LINUX -DWEBRTC_POSIX -DWEBRTC_NS_FLOAT -DWEBRTC_APM_DEBUG_DUMP=0 -DWEBRTC_INTELLIGIBILITY_ENHANCER=0 </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

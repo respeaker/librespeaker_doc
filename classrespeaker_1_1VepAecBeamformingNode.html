@@ -73,6 +73,8 @@ $(function() {
 <div class="title">respeaker::VepAecBeamformingNode Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="vep__aec__beamforming__node_8h_source.html">vep_aec_beamforming_node.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for respeaker::VepAecBeamformingNode:</div>
 <div class="dyncontent">
@@ -193,7 +195,9 @@ int16_t *&#160;</td><td class="memItemRight" valign="bottom"><b>_buffer_for_stor
 std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_channels_ptr</b></td></tr>
 <tr class="separator:a5e50f8282e18033cc7f14a529be1b073 inherit pro_attribs_classrespeaker_1_1BaseNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> provides beamforming, AEC, NR and DOA algorithms from Alango. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac50b5f2701d8ab1f9eac4766726ed1da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac50b5f2701d8ab1f9eac4766726ed1da">&#9670;&nbsp;</a></span>Create() <span class="overload">[1/2]</span></h2>
 
@@ -233,11 +237,11 @@ std::unique_ptr&lt; int16_t *[]&gt;&#160;</td><td class="memItemRight" valign="b
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create a <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> instance. Do beamforming and AEC (acoustic echo cancellation) on the input audio stream, output the most proper beam(single-beam) or all the beams(multi-beam).</p>
+<p>Create a <a class="el" href="classrespeaker_1_1VepAecBeamformingNode.html">VepAecBeamformingNode</a> instance. Do beamforming, AEC(acoustic echo cancellation), NR(noise reduction) and a part of DOA(direction of arrival) on the input audio stream, output the most proper beam(single-beam) or all the beams(multi-beam).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mic_type</td><td>- Specify the microphone type. </td></tr>
-    <tr><td class="paramname">is_single_beam_output</td><td>- Specify output single-beam(the most proper beam) or multi-beam(all the beams). </td></tr>
+    <tr><td class="paramname">is_single_beam_output</td><td>- Specify output single-beam(the most proper beam) or multi-beam(all the beams). When set to output single-beam, this node actually outputs 3 channels data, the first channel is the most proper beam channel, the second channel is reference channel, and the third channel is some vep scores. When set to output multi-beam, this node outputs all the beams and a reference channel and a vep-score channel. </td></tr>
     <tr><td class="paramname">ref_channel_index</td><td>- Please note that the channel index starts from <code>0</code>. For <a class="el" href="classrespeaker_1_1ReSpeaker.html">ReSpeaker</a> v2, it's better to specify <code>6</code> here.</td></tr>
   </table>
   </dd>

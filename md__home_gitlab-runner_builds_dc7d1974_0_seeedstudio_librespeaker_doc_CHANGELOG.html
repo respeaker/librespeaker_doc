@@ -65,7 +65,18 @@ $(function() {
 <div class="title">Change Logs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2>v2.1.1</h2>
+<div class="textblock"><h2>v2.1.2</h2>
+<ul>
+<li>support ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi now</li>
+<li>add "AloopOutputNode" so we can redirect the audio stream to a alsa device</li>
+<li>refeat AlsaCollectorNode: less CPU consumption</li>
+<li>refeat BaseNode: force tail nodes to EnableQueueFlush()</li>
+<li>refeat Snips1bDoaKwsNode and SnipsManDoaKwsNode: optimizes keyword spotting process</li>
+<li>fix some bugs</li>
+<li>add more examples</li>
+<li>update docs</li>
+</ul>
+<h2>v2.1.1</h2>
 <ul>
 <li>add two "snips" KWS nodes and related examples</li>
 <li>refactor "PulseCollectorNode" and "AlsaCollectorNode": now the capture sample rate is fixed to 48K and the output sample rate is fixed to 16K</li>
